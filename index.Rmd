@@ -1,0 +1,15 @@
+---
+title: README,Write Me! Digital Project Organization and Documentation
+author: [Victoria Farrar, Dr. Pamela L. Reynolds]
+date: March 4,2021
+output:
+   rmdformats::readthedown
+---
+
+```{r, echo=FALSE}
+library(knitr)
+```
+
+![](img/datalab-logo-full-color-rgb.png)
+
+# Overview
