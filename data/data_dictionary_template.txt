@@ -1,0 +1,11 @@
+
+DATA-SPECIFIC INFORMATION FOR: [FILENAME]
+<repeat this section for each dataset, folder or file, as appropriate>
+
+Variable List: 
+<list variable name(s), description(s), unit(s)and value labels as appropriate for each>
+
+Missing data codes: 
+<list code/symbol and definition>n
+
+Specialized formats or other abbreviations used: 

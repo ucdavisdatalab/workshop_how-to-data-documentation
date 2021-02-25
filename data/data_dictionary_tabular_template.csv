@@ -1,0 +1,2 @@
+﻿Variable,Column Name,Variable Type,Measurement unit, Allowed values,Missing Values,Description 
+Human-readable variable name (short),Actual variable name in the column ,Data type (e.g. numeric or character or YYYYMMDD),unit (if relevant),range or list of values allowed,how missing values are coded ,detailed description of the variable 
