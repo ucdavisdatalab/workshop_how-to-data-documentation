@@ -72,8 +72,7 @@ Some questions to consider:
 You should be able to answer many of these questions by filling out the templates for readmes, data dictionaries. codebooks provided in this workshop. 
 Many of these questions will be covered in the templates for documentation provided in this workshop. 
 
-## Activity: What should be included in metadata?
-[If the activity requires links, I will place links here. Otherwise, will remove this section.]
+## Activity: What should we document in this dataset?
 
 ### Tools for planning and documenting your project 
 
@@ -110,7 +109,6 @@ In this workshop, we will focus on documenting metadata at three levels:
 
 These three topics cover aspects of descriptive metadata (1-2) at various levels, and structural metadata (3) at the project level. We go into detail on each, provide templates and examples as a starting place below. 
 
-
 *Note: Although we have organized the workshop in this format, this information can be organized in a variety of ways. For instance, all of the above information could be included in text in a single readme.txt document. Specific decisions for your project will be up to you and how you plan to use your data, and you may encounter various forms of metadata "in the wild".*
 
 ## Project: File Directory Contents and Organization
@@ -142,7 +140,16 @@ READMEs should
 
 For more information on README contents beyond these minimum and more format recommendations, see [Cornell University's guide to writing "readme" style metadata](https://data.research.cornell.edu/content/readme). 
 
-For some README inspiration, see these real world examples: LINKS
+For some README inspiration, see these real world examples:
+
+* [Example README.txt](https://osf.io/f46sm/) for a software survey project (University of Arizona, OSF)
+  * includes directory overview as well as analysis workflow description
+* [README.md](https://github.com/ecalfee/MissDemeanors/blob/master/README.md) for the [2020 CA Election Data Challenge](https://datalab.ucdavis.edu/ca-election-2020-data-challenge/) winning team's project
+  * uses data sourced from archives / government databases, describes analysis workflow
+* [README.md](https://github.com/softwaresaved/software_in_research_survey_2014/blob/1.0/README.md) for a 2014 Software in research survey. 
+  * includes language on analysis pipeline and how to reproduce workflow
+* [README.md](https://github.com/Carceral-Ecologies/Carceral-Proximity-Analysis/blob/master/README.md) for the [Hack for California](https://datalab.ucdavis.edu/hack-for-california/) Carceral Ecologies Project.
+
 You'll notice substantial variation in the formats and topics included, but most include the bare minimum information for data reuse. 
 
 ### Project Directory Structure 
@@ -151,9 +158,7 @@ As you begin your README documentation, you may want to consider the organizatio
 
 **Directory structure tips**: While folder directories will very much vary with project types and researcher styles, there are some tips that may help with organization. It's best to include all files for your project in one single project folder, with subfolders. Raw,original data files can often be stored separately from processed or filtered datasets. Results or products, such as statistics or summary tables, or figures, can be stored in separate folders. Code and scripts can have their own folder, too. Whatever you choose, make sure there is some logic to the organization (this will come through when you explain it in your documentation) and that you are **consistent**. 
 
-More "real world" examples can be found here: <mark> ADD EXAMPLES </mark>
-
-*Note: GitHub repositories are a great place to get a sense of what the organizational norm is for your field. Often, a folder directory will become housed in a version-controlled repository, so repositories can serve as inspiration for how to structure your folder directories. For more on what a repository is and on version control with git, see <mark> LINK TO WORKSHOP </mark> *
+*Note: GitHub repositories are a great place to get a sense of what the organizational norm is for your field. Often, a folder directory will become housed in a version-controlled repository, so repositories can serve as inspiration for how to structure your folder directories. For more on what a repository is and on version control with git, see [this past workshop on version control](https://ucdavisdatalab.github.io/workshop_introduction_to_version_control/)*
 
 ### File Names
 File names are one of the first places many of us store metadata. To better organize your project directory and document your metadata, we recommend using a consistent naming scheme. You can then record the general form of this file naming scheme in your README document, so that future users can easily navigate current files and generate new files that match the format. 
@@ -212,6 +217,10 @@ Some examples of data dictionaries and codebooks:
 
 *An example codebook from a larger survey. It explains what the numerical codes mean and how they may connect to codes used in other surveys. This codebook could be improved by further explaining the names / information stored in columns and indicating missing values.[Source](https://www.researchgate.net/publication/341000060_The_Semantic_Data_Dictionary_-An_Approach_for_Describing_and_Annotating_Data)*
 
+More examples: 
+
+* [Extensive codebook](http://gss.norc.org/documents/codebook/GSS_Codebook_index.pdf) for the General Social Survey national survey run by the University of Chicago
+
 
 ## Project : Workflow Relationships
 
@@ -237,9 +246,13 @@ If your analysis and data processes are more complicated than just one code scri
 * Be consistent in the structure of workflow diagrams across projects
 * Save a version of your workflow diagram as an image, like .png or .jpg so that it can be accessed/viewed by others without your proprietary software (if used)
 
-These diagrams can be made in software like Microsoft Powerpoint or Google Slides, and even basic image editors if you stick to standard shapes. Other options include online tools like [Lucidchart](https://www.lucidchart.com/pages/data-flow-diagram) or [Creately](https://creately.com/lp/data-flow-diagram-software-online/), but the free versions of these software may be limited. 
+These diagrams can be made in software like Microsoft Powerpoint or Google Slides, and even basic image editors if you stick to standard shapes. Other options include online tools like [Lucidchart](https://www.lucidchart.com/pages/data-flow-diagram) or others [(list here)](https://www.freecodecamp.org/news/flow-chart-creator-and-workflow-diagram-apps/), but the free versions of these software may be limited. 
 
 Some workflow diagram examples:
+
+* Simple [workflow diagram](https://github.com/dib-lab/dib-MMETSP/blob/master/mmetsp_pipeline1.png) for a bioinformatics project (microbial sequencing)
+* [Workflow diagram](https://github.com/raynamharris/DissociationTest/blob/master/figures/00_methodsoverview/workflow-01.png) for a transcriptomic study (biology/neuroscience) (Harris et al 2019)
+* [Workflow diagram](https://github.com/raynamharris/IntegrativeProjectWT2015/blob/master/figures/00_schematics/figure_workflow.png) for another bioinformatic study (Harris et al 2020)
 
 ## Metadata standards and schemas
 
@@ -274,5 +287,10 @@ Let's get documenting!
 
 * Interested in the DMPtool, more structured metadata and metadata standards? The UC Davis library offers researchers consultations related to data management. [Learn more here](https://www.library.ucdavis.edu/service/data-management/describe-2/).
 
+* [Metadata questions to ask in plain language | USGS](https://geology.usgs.gov/tools/metadata/tools/doc/ctc/)
+* [Data documentation: Difference between readmes, data dictionaries, and codebooks | University of Wisconsin Madison]()
+* [Data documentation and metadata | CESSDA](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/2.-Organise-Document/Documentation-and-metadata)
+* [Guide to writing "readme" style metadata | Cornell University](https://data.research.cornell.edu/content/readme#bestpractices)
+* [How to make a data dictionary | Open Science Framework](https://help.osf.io/hc/en-us/articles/360019739054-How-to-Make-a-Data-Dictionary)
 
 
