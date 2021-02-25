@@ -110,6 +110,9 @@ In this workshop, we will focus on documenting metadata at three levels:
 
 These three topics cover aspects of descriptive metadata (1-2) at various levels, and structural metadata (3) at the project level. We go into detail on each, provide templates and examples as a starting place below. 
 
+
+*Note: Although we have organized the workshop in this format, this information can be organized in a variety of ways. For instance, all of the above information could be included in text in a single readme.txt document. Specific decisions for your project will be up to you and how you plan to use your data, and you may encounter various forms of metadata "in the wild".*
+
 ## Project: File Directory Contents and Organization
 At the highest level of your project is your project **directory**, or the folder(s) containing all the files of your project, from data and code to manuscript drafts.
 
@@ -174,6 +177,8 @@ In terms of format, file names are best if they are human-readable, machine-read
 
 At the next level, after project organization and folders, lie the details of our data / datasets. If you are working with file types such as a set of images, photos, videos, where the data lies in separate files, you may want to make a sub-folder README, where the content of the folder is described, along with the origin and subject of the files, and the file naming scheme or convention. Depending on your use and project complexity, you can also include this information in the larger, project README, though often it is best to have the README file housed closely with the files it details. 
 
+### Data Dictionaries / Codebooks 
+
 If you work with tabular or spreadsheet data, as many researchers do, you might need to collect metadata differently. In this case, there are arrays of variables, codes and entries that may need a key and may relate to one another. When working with this type of data, **data dictionaries and codebooks** can be useful. 
 
 **Data dictionaries** describe the variables of the dataset and their parameters, specifically for tabular data. **Codebooks** are very similar to data dictionaries and are commonly used in survey data, and may have a slightly different format (but the difference is mainly just field nomenclature).
@@ -199,21 +204,56 @@ Similarly to READMEs, data dictionaries should be:
 
 Some examples of data dictionaries and codebooks: 
 
-<mark> EXAMPLES </mark>
+![](img/data_vs_data_dictionary.png)
 
-### Metadata standards and schemas
-<mark> Move up in reader? Add scope disclaimer at beginning that we will not cover structured metadata extensively in this workshop? </mark>
+*This diagram illustrates how a data dictionary may relate to an actual dataset. [Source](https://www.google.com/url?sa=i&url=https%3A%2F%2Fdataedo.com%2Fblog%2Fwhat-is-data-dictionary-2&psig=AOvVaw1Pp3wLXPH7Rp1RbZy8GBzI&ust=1614297939410000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJiju83eg-8CFQAAAAAdAAAAABAD)*
 
-In this workshop, we have discussed initial metadata to start the process of documenting your project. These forms of metadata are relatively simple and are considered *unstructured* metadata. 
-As projects become more complex, incorporate more collaborators, or are conducted as part of institutes or large consortiums, more structured metadata standards tend to be used. 
+![](img/SDD-Example-Codebook.png)
+
+*An example codebook from a larger survey. It explains what the numerical codes mean and how they may connect to codes used in other surveys. This codebook could be improved by further explaining the names / information stored in columns and indicating missing values.[Source](https://www.researchgate.net/publication/341000060_The_Semantic_Data_Dictionary_-An_Approach_for_Describing_and_Annotating_Data)*
 
 
 ## Project : Workflow Relationships
-Structural metadata
 
-Workflow Diagrams
+Once we have covered some of the **descriptive metadata** (the WHAT) detailing our project directory, file organization and our datasets, we can zoom out again and describe how it all relates, and how data is processed and analyzed. This **structural metadata** (the HOW) covers our workflow and processing/analysis "pipeline". 
 
-*Note: Although we have organized the workshop in this format, this information can be organized in a variety of ways. For instance, all of the above information could be included in text in a single readme.txt document. Specific decisions for your project will be up to you and how you plan to use your data, and you may encounter various forms of metadata "in the wild".*
+Workflow and structural metadata can easily be included in your overall project README file. You can include a section that describes in text how datasets relate to each other, and how data was processed and analyzed from raw to create results, like statistics tables and figures. 
+
+Some questions to consider when describing these processes: 
+
+* How was data processed or filtered from the raw data? What methods were used, and if done programatically using code, what are those scripts called? 
+* What was your analysis workflow? What software or programming languages were required, for which datasets?
+* How were any results files, such as summary tables or figures, produced? What scripts, if any, were used?
+
+### Workflow Diagrams
+
+If your analysis and data processes are more complicated than just one code script, or you are working with multiple different datasets, sometimes it can be helpful to display this information graphically using a **workflow diagram** (also called a **data-flow diagram**). This can serve as a "map" laying out the workflow of your project, and can add more visual elements to your project documentation. It's a good idea to explain your workflow verbally in text too, which can help your process be accessible in multiple modalities as well as help you outline your process before creating a visual diagram. 
+
+**Tips for creating a workflow diagram:**
+
+* Use shapes to represent files, such as datasets, scripts, figures, tables or other output.
+* Connect shapes with arrows to indicate the flow of information through files from data input to result output.
+* Include a key if you use multiple types of shapes or colors for different file types (ex, data vs scripts) 
+* Be consistent in the structure of workflow diagrams across projects
+* Save a version of your workflow diagram as an image, like .png or .jpg so that it can be accessed/viewed by others without your proprietary software (if used)
+
+These diagrams can be made in software like Microsoft Powerpoint or Google Slides, and even basic image editors if you stick to standard shapes. Other options include online tools like [Lucidchart](https://www.lucidchart.com/pages/data-flow-diagram) or [Creately](https://creately.com/lp/data-flow-diagram-software-online/), but the free versions of these software may be limited. 
+
+Some workflow diagram examples:
+
+## Metadata standards and schemas
+
+In this workshop, we have discussed these simple forms of metadata to start the process of documenting your project in relatively straightforward, approachable ways. This is an important initial step for researchers to start good data documentation practices and make sure their data is interpretable and reusable. 
+
+As it has become clear, however, the formats of this metadata can vary a lot between researchers and research groups (even when we include the minimum information for reuse). Often, as projects become more complex, add on more collaborators, agencies, and institutions, or become affiliated with funding agencies or data depositories, more regimented metadata is needed. Researchers often turn to *standards-based metadata*, and additionally *structured metadata*.  
+
+Structured metadata often involves using specialized tools to create machine-readable, standardized metadata documents that align with a discipline-specific format. These documents are often written in their own special format, such as eXtensible Markup Language (XML), and are sometimes called *metadata schema*. Researchers format these metadata documents to align with discipline specific *metadata standards* set by agencies, data centers, or common data depositories in that field. For instance, the [Dublin Core](https://dublincore.org/) is a relatively general metadata standard applicable to many fields, while the [Data Documentation Initiative standard] (https://ddialliance.org/) is widely used in social and behavioral sciences. 
+
+We encourage you to find the metadata standard that is appropriate for your discipline and your research so that you can learn more in the future. Here are some searchable lists of metadata standards by field: 
+
+* [Metadata Standards | UK Digital Curation Centre](https://www.dcc.ac.uk/guidance/standards/metadata/list)
+* [Metadata Directory | Research Data Alliance](http://rd-alliance.github.io/metadata-directory/standards/)
+
 
 # Principles to Practice
 
@@ -231,6 +271,8 @@ Let's get documenting!
 
 
 # Additional Resources
+
+* Interested in the DMPtool, more structured metadata and metadata standards? The UC Davis library offers researchers consultations related to data management. [Learn more here](https://www.library.ucdavis.edu/service/data-management/describe-2/).
 
 
 
