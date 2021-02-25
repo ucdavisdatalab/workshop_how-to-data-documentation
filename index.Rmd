@@ -85,6 +85,14 @@ If you are still in the early phases of a project, it can be a great idea to cre
 # Levels of Metadata 
 In this workshop, we will focus on documenting metadata at three levels: 
 
+:::: {style="display: flex;"}
+
+::: {}
+![](img/metadata_levels_diagram.png)
+:::
+
+::: {}
+
 1.**Project level: File directory contents and organization** 
 
   * **Documentation format: README file**
@@ -106,6 +114,10 @@ In this workshop, we will focus on documenting metadata at three levels:
     * How was data cleaned, processed and/or analyzed? 
     * What code or scripts were used to do this?
     * How do different datasets relate to one another?
+
+:::
+
+::::
 
 These three topics cover aspects of descriptive metadata (1-2) at various levels, and structural metadata (3) at the project level. We go into detail on each, provide templates and examples as a starting place below. 
 
@@ -278,16 +290,23 @@ Let's get documenting!
 
 ## Templates: 
 
-* README template: [download .md](data/README_template.md) or [download .txt](data/README_template.txt)
+* README template: [markdown](template_files/README_template.md) or [plain text (.txt)](data/README_template.txt)
   * *based off of the Cornell and University of Arizona templates*
-* Data dictionary template: [download .txt](data/data_dictionary_template.txt) or [download tabular version, .csv](data/data_dictionary_tabular_template.csv)
-  * *based off of the [Open Science Framework recommendations](https://help.osf.io/hc/en-us/articles/360019739054-How-to-Make-a-Data-Dictionary*
-* Workflow diagram template (uses Powerpoint):[download .ppt](data/workflow_diagram_template.ppt)
+* Data dictionary template: [plain text](template_files/data_dictionary_template.txt) or [tabular (.csv)](template_files/data_dictionary_tabular_template.csv)
+  * *based off of the [Open Science Framework recommendations](https://help.osf.io/hc/en-us/articles/360019739054-How-to-Make-a-Data-Dictionary)*
+* Workflow diagram template:[powerpoint file (.ppt)](template_files/workflow_diagram_template.ppt)
 
 
 # Additional Resources
 
+### UC Davis 
 * Interested in the DMPtool, more structured metadata and metadata standards? The UC Davis library offers researchers consultations related to data management. [Learn more here](https://www.library.ucdavis.edu/service/data-management/describe-2/).
+
+* To learn more about keeping data tidy and tips and tricks in Microsoft Excel, see DataLab's past workshop materials [here](https://ucdavisdatalab.github.io/workshop_keeping_data_tidy/).
+
+* For more information on version control and GitHub, see DataLab's past workshop [recording (Fall 2019)](https://www.youtube.com/watch?v=1SiZTRP6hEc&feature=youtu.be) and materials [from winter 2021 here](https://ucdavisdatalab.github.io/workshop_introduction_to_version_control/)
+
+### Useful Links 
 
 * [Metadata Worksheet | Harvard Biomedical Data Management](https://docs.google.com/document/d/1yOXCQa037_NSpqKuq5TL06gvjeeaReUCOL5HHkxyGWU/edit)
   * helps walk you through plans for metadata collection and documentation 
@@ -297,6 +316,7 @@ Let's get documenting!
 * [README checklist | Harvard Biomedical Data Management](https://osf.io/7hcuv/)
   * great checklist to evaluate the utility of your README when you are done! 
 * [GitHub Repo README template](https://github.com/scottydocs/README-template.md)
+  * template for GitHub repositories, specifically
 * [How to make a data dictionary | Open Science Framework](https://help.osf.io/hc/en-us/articles/360019739054-How-to-Make-a-Data-Dictionary)
 
 
