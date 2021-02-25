@@ -1,19 +1,20 @@
-
+<guiding comments can be filled in or removed > 
 
 GENERAL INFORMATION
 
 Title of Project: 
 
-Author Information
-	A. 	Name: 
-		Role / contributions:
-		Institution: 
-		Email: 
+Corresponding Author:  
+<who should be contacted about this dataset > 
+  [FirstName] [LastName], [affiliation], [email address]
 
-	B. 	Name: 
-		Role / contributions:
-		Institution: 
-		Email:
+Contributors:
+
+<The roles are defined by the CRediT taxonomy http://credit.niso.org >
+
+- [FirstName1 LastName1], [Affiliation], [Email]: [role1], [role2], [...]
+- [FirstName2 LastName2], [Affiliation], [Email] : [role1], [role2], [...]
+- [FirstName3 LastName3], [Affiliation], [Email] : [role3], [role4], [...]
 
 
 Date(s) of data collection (single date, range, approximate date) <suggested format YYYY-MM-DD>: 
@@ -34,6 +35,15 @@ DATA & FILE OVERVIEW
 
 File List: 
 <list all files (or folders, as appropriate for dataset organization) contained in the dataset, with a brief description>
+
+
+#### [Folder 1 Name]: [Description of contents]
+- [file1 or set of related files]: [Purpose, contents]
+- [file2 or set of related files]:  [Purpose, contents]
+
+#### [Folder 1 Name]/[Subfolder 1 Name]: [Description of contents]
+- [file1 or set of related files]:  [Purpose, contents]
+
 
 Relationship between files, if important: 
 
