@@ -69,10 +69,9 @@ Some questions to consider:
 * Why were the data created?
 * How should the data be cited? Where can I find relevant publications?
 
-You should be able to answer many of these questions by filling out the templates for readmes, data dictionaries. codebooks provided in this workshop. 
-Many of these questions will be covered in the templates for documentation provided in this workshop. 
+Other example questions can be found here: [Metadata Questions in Plain Language (USGS)](https://geology.usgs.gov/tools/metadata/tools/doc/ctc/). 
 
-## Activity: What should we document in this dataset?
+You should be able to answer many of these questions as you build out your documentation through readmes and data dictionaries associated with your project. 
 
 ### Tools for planning and documenting your project 
 
@@ -319,4 +318,8 @@ Let's get documenting!
   * template for GitHub repositories, specifically
 * [How to make a data dictionary | Open Science Framework](https://help.osf.io/hc/en-us/articles/360019739054-How-to-Make-a-Data-Dictionary)
 
+### Data Used in Workshop 
+
+* The data visualization for the in-workshop activity on the top dog breed comes from [Information is Beautiful](https://www.informationisbeautiful.net/visualizations/best-in-show-whats-the-top-data-dog/
+)
 
