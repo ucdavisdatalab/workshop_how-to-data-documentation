@@ -62,8 +62,10 @@ Some questions to consider:
 * How is missing data denoted?
 
 * How, where and on what was this data collected? What processes were used for creating the data?
+* What were the criteria for including the data in downstream analyses?
 * How was the data analyzed? 
 * What software do I need in order to read the data?
+* What is the process for updating the data going forward?
 
 * Can I give these data to someone else?
 * Why were the data created?
@@ -144,12 +146,13 @@ A README document will describe the organization and contents of your project, a
 READMEs should 
 
 * Be written in plain-text (.txt) or markdown (.md) so they are easily accessible by anyone / non-proprietary
+  * *For more information on markdown, see [this guide](https://www.markdownguide.org/basic-syntax/)*
 * Live in the main directory of the project folder or file they describe 
 * Be named so that it is clear what project / file it describes
 * Be formatted similarly across different projects 
 * Use standardized formats, such as ISO 8601 for dates (YYYY-MM-DD) 
 
-For more information on README contents beyond these minimum and more format recommendations, see [Cornell University's guide to writing "readme" style metadata](https://data.research.cornell.edu/content/readme). 
+For more information on README contents beyond these minimum and more format recommendations, see [Cornell University's guide to writing "readme" style metadata](https://data.research.cornell.edu/content/readme).
 
 For some README inspiration, see these real world examples:
 
@@ -167,7 +170,12 @@ You'll notice substantial variation in the formats and topics included, but most
 
 As you begin your README documentation, you may want to consider the organization of your project and directory. Do you have a consistent file naming convention or scheme? Is there a logical hierarchy to your folders?
 
-**Directory structure tips**: While folder directories will very much vary with project types and researcher styles, there are some tips that may help with organization. It's best to include all files for your project in one single project folder, with subfolders. Raw,original data files can often be stored separately from processed or filtered datasets. Results or products, such as statistics or summary tables, or figures, can be stored in separate folders. Code and scripts can have their own folder, too. Whatever you choose, make sure there is some logic to the organization (this will come through when you explain it in your documentation) and that you are **consistent**. 
+**Directory structure tips**: While folder directories will very much vary with project types and researcher styles, there are some tips that may help with organization. It's best to include all files for your project in one single project folder, with subfolders. Raw,original data files can often be stored separately from processed or filtered datasets. Results or products, such as statistics or summary tables, or figures, can be stored in separate folders. Code and scripts can have their own folder, too. In large projects, you might also want to have an "archive" folder, where you stored zipped folders of past code scripts or data, so they can be accessed again, but are separate from the rest of the working directory. Whatever you choose, make sure there is some logic to the organization (this will come through when you explain it in your documentation) and that you are **consistent**. 
+
+This diagram shows an example of two ways you can organize a directory: 1) by workflow step, such as data files, code files, and outputs; or 2) by output, such as a result table or figure, and all the data and code required for that output is organized in a sub-directory. (Source: [Library Carpentry](https://librarycarpentry.org/lc-fair-research/05-reusable/index.html))
+
+![](img/directory_organization_library_carpentry.png)
+
 
 *Note: GitHub repositories are a great place to get a sense of what the organizational norm is for your field. Often, a folder directory will become housed in a version-controlled repository, so repositories can serve as inspiration for how to structure your folder directories. For more on what a repository is and on version control with git, see [this past workshop on version control](https://ucdavisdatalab.github.io/workshop_introduction_to_version_control/)*
 
@@ -187,7 +195,7 @@ And an example file name scheme in practice, from a bioinformatics study:
 (from [Reiter et al (2021)](https://academic.oup.com/gigascience/article/10/1/giaa140/6092773?login=true))
 As you can see, as file names become more complex, using a consistent scheme and documenting it is KEY to data interpretability! 
 
-In terms of format, file names are best if they are human-readable, machine-readable, and work well with default ordering. Briefly, this means you as a user should be able to get some metadata from the file name, the file name avoids spaces and special characters, and ideally has some date or version number that can be used to sort files and versions. You can read more about these file-naming best practices [here](https://ucdavisdatalab.github.io/workshop_keeping_data_tidy/#how-to-name-your-files). 
+In terms of format, file names are best if they are human-readable, machine-readable, and work well with default ordering. Briefly, this means you as a user should be able to get some metadata from the file name, the file name avoids spaces and special characters, and ideally has some date or version number that can be used to sort files and versions. You can read more about these file-naming best practices [here](https://ucdavisdatalab.github.io/workshop_keeping_data_tidy/#how-to-name-your-files). As with file directories, there is no one-size-fits-all solution. That said, you can tailor your names to suit your needs and field of study, and as long as you are consistent and documenting your naming scheme, you are doing it right!
 
 ## Datasets: Variables and Codes
 
@@ -215,7 +223,7 @@ Similarly to READMEs, data dictionaries should be:
 
 * Stored in open, non-proprietary formats. Data dictionaries, like the data they describe, may be easily formatted in a tabular format. Some researchers using a spreadsheet manager like Excel might place them in a separate tab in the spreadsheet, but we encourage you to save this tabular data separately as either a .txt or .csv file. This will make the data more accessible to future users who may not have access to your proprietary software. You can also store the information in a list, non-tabular format in a stand-alone .txt or .md file, or within a larger readme. Whatever you choose, make sure to be consistent! 
 * Live in the same directory / folder with the file it describes
-* Be named so that it is clear what project / file it describes
+* Be named so that it is clear what project / file it describes (e.g. `[dataname]_dictionary.[ext]` or `[dataname]_documentation.[ext]`)
 * Be consistently formatted across different datasets within a project
 
 Some examples of data dictionaries and codebooks: 
@@ -271,7 +279,7 @@ In this workshop, we have discussed these simple forms of metadata to start the 
 
 As it has become clear, however, the formats of this metadata can vary a lot between researchers and research groups (even when we include the minimum information for reuse). Often, as projects become more complex, add on more collaborators, agencies, and institutions, or become affiliated with funding agencies or data depositories, more regimented metadata is needed. Researchers often turn to **standards-based metadata**, and additionally **structured metadata**.  
 
-Structured metadata often involves using specialized tools to create machine-readable, standardized metadata documents that align with a discipline-specific format. These documents are often written in their own special format, such as eXtensible Markup Language (XML), and are sometimes called **metadata schema**. Researchers format these metadata documents to align with discipline specific **metadata standards** set by agencies, data centers, or common data depositories in that field. For instance, the [Dublin Core](https://dublincore.org/) is a relatively general metadata standard applicable to many fields, while the [Data Documentation Initiative standard] (https://ddialliance.org/) is widely used in social and behavioral sciences. 
+Structured metadata often involves using specialized tools to create machine-readable, standardized metadata documents that align with a discipline-specific format. These documents are often written in their own special format, such as eXtensible Markup Language (XML), and are sometimes called **metadata schema**. Researchers format these metadata documents to align with discipline specific **metadata standards** set by agencies, data centers, or common data depositories in that field. For instance, the [Dublin Core](https://dublincore.org/) is a relatively general metadata standard applicable to many fields, while the [Data Documentation Initiative standard] (https://ddialliance.org/) is widely used in social and behavioral sciences. For spatial data, the standards are set by the [Federal Geographic Data Committee](https://www.fgdc.gov/metadata/geospatial-metadata-standards). 
 
 We encourage you to find the metadata standard that is appropriate for your discipline and your research so that you can learn more in the future. Here are some searchable lists of metadata standards by field: 
 
@@ -323,3 +331,5 @@ Let's get documenting!
 * The data visualization for the in-workshop activity on the top dog breed comes from [Information is Beautiful](https://www.informationisbeautiful.net/visualizations/best-in-show-whats-the-top-data-dog/
 )
 
+* Data for the studio-section demo comes from [FiveThirtyEight's analysis of Hollywood movie budgets and representation of women](https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/)
+  * Datasets were sourced from [data.world](https://data.world/fivethirtyeight/bechdel)

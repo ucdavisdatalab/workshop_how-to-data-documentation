@@ -4,13 +4,16 @@ GENERAL INFORMATION
 
 Title of Project: 
 
+About: 
+<briefly describe the project. What were the aims, general methods, and expected results/impact?> 
+
 Corresponding Author:  
 <who should be contacted about this dataset > 
-  [FirstName] [LastName], [affiliation], [email address]
+  [FirstName] [LastName], [Affiliation], [email address]
 
 Contributors:
 
-<The roles are defined by the CRediT taxonomy http://credit.niso.org >
+<the roles can be defined by the CRediT taxonomy http://credit.niso.org >
 
 - [FirstName1 LastName1], [Affiliation], [Email]: [role1], [role2], [...]
 - [FirstName2 LastName2], [Affiliation], [Email] : [role1], [role2], [...]
@@ -21,7 +24,7 @@ Date(s) of data collection (single date, range, approximate date) <suggested for
 
 Geographic location of data collection <latitude, longiute, or city/region, State, Country, as appropriate>: 
 
-Information about funding sources that supported the collection of the data: 
+Information about funding sources that supported the collection of the data: <if relevant>
 
 
 SHARING/ACCESS INFORMATION
@@ -34,7 +37,7 @@ Recommended citation for this dataset:
 DATA & FILE OVERVIEW
 
 File List: 
-<list all files (or folders, as appropriate for dataset organization) contained in the dataset, with a brief description>
+<list all files (or folders, as appropriate for dataset organization) contained in the dataset, with a brief description. This section should walk someone brand new through the contents of the directory and its files. >
 
 
 #### [Folder 1 Name]: [Description of contents]
@@ -45,7 +48,7 @@ File List:
 - [file1 or set of related files]:  [Purpose, contents]
 
 
-Relationship between files, if important: 
+Relationship between files: <if relevant. Where should someone begin as they are using this dataset? Where should they move next? Which files depend or call on each other? This is the information that can be included in a workflow diagram as well, if desired > 
 
 
 
@@ -65,4 +68,4 @@ Methods for reproducing the analysis:
 <describe how to go from processed data to any results products, figures or tables> 
 
 Software needed to interpret the data: 
-<include full name and version of software, and any necessary packages or libraries needed to run scripts>
+<include full name and version of software, and any necessary packages or libraries needed to run scripts. Provide links to instructions on how to download/install each dependency.>
