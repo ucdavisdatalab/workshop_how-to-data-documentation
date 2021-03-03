@@ -8,6 +8,7 @@ This repo is the home for DataLab's "README, Write Me! Digital Project Organizat
 ### Links
 
 Workshop reader: https://ucdavisdatalab.github.io/workshop_how-to-data-documentation/
+
 Event registration page: https://datalab.ucdavis.edu/eventscalendar/readme-write-me/
 
 ### Protocols
