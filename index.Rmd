@@ -177,17 +177,17 @@ This diagram shows an example of two ways you can organize a directory: 1) by wo
 ![](img/directory_organization_library_carpentry.png)
 
 
-*Note: GitHub repositories are a great place to get a sense of what the organizational norm is for your field. Often, a folder directory will become housed in a version-controlled repository, so repositories can serve as inspiration for how to structure your folder directories. For more on what a repository is and on version control with git, see [this past workshop on version control](https://ucdavisdatalab.github.io/workshop_introduction_to_version_control/)*
+*Note: For researchers in STEM or other computational fields, GitHub repositories are a great place to get a sense of what the organizational norm is for your field. Often, a folder directory will become housed in a version-controlled repository, so repositories can serve as inspiration for how to structure your folder directories. For more on what a repository is and on version control with git, see [this past workshop on version control](https://ucdavisdatalab.github.io/workshop_introduction_to_version_control/)*
 
 ### File Names
 File names are one of the first places many of us store metadata. To better organize your project directory and document your metadata, we recommend using a consistent naming scheme. You can then record the general form of this file naming scheme in your README document, so that future users can easily navigate current files and generate new files that match the format. 
 
 Some possible schemes:  
 
-* `[authorLastName]_[method]_[subject]_[YYYYMMDD]_[version].[ext]`
-* `[project-name]_[method]_[version]_[YYYYMMDD].[ext]`
+* `[YYYYMMDD]_[method]_[subject]_[authorLastName]_[version].[ext]`
+* `[YYYYMMDD]_[project-name]_[method]_[version].[ext]`
 * `[YYYYMMDD]_[version]_[subject]_[authorInitials].[ext]`
-* `[file-type]_[author]_[YYYYMMDD].[ext]`
+* `[subject]_[author]_[YYYYMMDD].[ext]`
 
 And an example file name scheme in practice, from a bioinformatics study: 
 ![](img/fig3_reiter_brown_2021.jpeg)
@@ -325,6 +325,11 @@ Let's get documenting!
 * [GitHub Repo README template](https://github.com/scottydocs/README-template.md)
   * template for GitHub repositories, specifically
 * [How to make a data dictionary | Open Science Framework](https://help.osf.io/hc/en-us/articles/360019739054-How-to-Make-a-Data-Dictionary)
+* [Ontology Database for the Biological Sciences](http://www.obofoundry.org/)
+  * Ontologies cover controlled vocabularies for different fields, such as how to name genes or gene products, for example. 
+* [Metadata tools | Stanford Libraries](https://library.stanford.edu/research/data-management-services/data-best-practices/creating-metadata/metadata-tools-comparison)
+  * List of tools and plug-ins that can help create more standardized and structured metadata
+
 
 ### Data Used in Workshop 
 
