@@ -1,11 +1,14 @@
 # Workshop: README, Write Me! Digital Project Organization and Documentation 
 
-This repo is the home for DataLab's "README, Write Me! Digital Project Organization and Documentation " workshop which introduces learners to metadata and best practices for data documentation and project organization.
+This repo is the home for DataLab's "README, Write Me! Digital Project Organization and Documentation" workshop which introduces learners to metadata and best practices for data documentation and project organization.
 
 ### Maintainers
 * Pamela Reynolds, UC Davis DataLab
 
 ### Links
+
+Workshop reader: https://ucdavisdatalab.github.io/workshop_how-to-data-documentation/
+Event registration page: https://datalab.ucdavis.edu/eventscalendar/readme-write-me/
 
 ### Protocols
 
