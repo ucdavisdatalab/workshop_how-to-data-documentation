@@ -14,77 +14,86 @@ library(knitr)
 
 # Overview
 
-This workshop covers best practices for organizing and documenting your digital projects for robust, reproducible research. Topics covered will include data documentation, forms of metadata at both the data and project level, and best practices for organizing file directories and recording metadata. After this workshop learners will be able to create a readme for their data-driven project directory, design a data dictionary (or codebook) for a dataset, and describe how to use a workflow diagram to represent their data gathering, cleaning, and analyses methodology. This workshop will include a studio portion where learners are guided through putting the principles into practice to begin documenting their own research projects. 
+This workshop covers best practices for organizing and documenting your digital projects for robust, reproducible research. Topics covered include data documentation, forms of metadata at both the data and project level, and best practices for organizing file directories and recording metadata. After this workshop learners will be able to create a readme for their data-driven project directory, design a data dictionary (or codebook) for a dataset, and describe how to use a workflow diagram to represent their data gathering, cleaning, and analyses methodology. This workshop includes a studio portion where learners are guided through putting principles into practice to begin documenting their own research projects. 
 
 ## Learning Objectives
 
 After this workshop, learners should be able to: 
 
 * Define metadata 
-* Understand the importance of collecting metadata / data documentation
-* Recognize the different ways metadata can be recorded at the project and dataset level 
-* Locate the relevant metadata standard for their field
+* Describe the importance of collecting metadata / data documentation
+* Identify the different ways metadata can be recorded at the project and dataset level 
+* Locate a relevant metadata standard for their field
 * Produce a data dictionary / codebook for a tabular dataset 
 * Document the organization of a data-driven project using a README 
 * Represent how their data is processed and analyzed using a workflow diagram
 
+# Background: Data Documentation
+
+## Why document?
+
+Detailed documentation of datasets and data analysis workflows helps other researchers, including collaborators, find and use your data more easily. Strong documentation also enables reuse and reanalysis of your data, which increases research reproducibility and scientific integrity ([NASEM 2019](https://www.ncbi.nlm.nih.gov/books/NBK547546/)).
+
+Consistent documentation practices will also help *you* find, use, and re-analyze your own data in the future. Have you ever put a project on the backburner for a few months, only to return and be confused as to what was in what dataset, which dataset file was up to date, or what analyses you used? Just as hardware fails and information can be lost over time (aka bit rot), we are only human and can't be expected to remember everything. The diagram below illustrates how information about datasets or projects are lost over time as researchers become less and less familiar with the inner workings of a particular project. While the figure revolves around issues across a researchers' career, information is also lost during the shorter tenure of our graduate and post-doctoral careers as we juggle multiple projects, often move between machines and locations, and lose space in our "mental storage." Keeping well-documented data and projects is an antidote to these issues. 
+
+![](img/information_entropy_figure.png){width=65%}
+*(from [Michener et al 1997](https://esajournals.onlinelibrary.wiley.com/doi/10.1890/1051-0761%281997%29007%5B0330%3ANMFTES%5D2.0.CO%3B2))*
+
+Documenting your data and project consistently saves you time and avoids headaches. It also importantly increases data accessibility, transparency, and reproducibility in your field and research at large. Having robust documentation workflows is key to scientific integrity in the digital age.
+
 # Defining Metadata 
-Metadata, as its name suggests, is data about your data or information about information. More specifically, the [National Information Standards Organization](http://www.niso.org/press-releases/2004/07/niso-offers-public-free-primer-metadata#:~:text=In%20brief%2C%20the%2020%2Dpage,data%2C%20or%20information%20about%20information.) defines metadata as "structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use, or manage an information resource." Whenever we **document** our processes, **describe** the contents of our datasets and variables, or **record** analysis details, we are collecting metadata. 
+
+Metadata, as its name suggests, is data about your data. It is information about information. More specifically, the [National Information Standards Organization](http://www.niso.org/press-releases/2004/07/niso-offers-public-free-primer-metadata#:~:text=In%20brief%2C%20the%2020%2Dpage,data%2C%20or%20information%20about%20information.) defines metadata as "structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use, or manage an information resource." Whenever we **document** our processes, **describe** the contents of our datasets and variables, or **record** analysis details, we are collecting metadata. 
 
 ## Metadata in the Data Lifecycle
 
 ![](img/data_lifecycle_metadata.png)
 *(Image from [USGS](https://pubs.usgs.gov/of/2013/1265/pdf/of2013-1265.pdf) with modifications.)*
 
-When considering our projects through the lens of [the data lifecycle](https://old.dataone.org/data-life-cycle), data documentation should ideally occur across all stages of our project. We should consider how we will collect metadata when planning out our data-driven projects, record metadata along with our actual data collection,and describe our data processing and analysis worfklows. When our project finishes, we also should include details about the long-term storage of our data, related publications, reports, or archives along with our dataset for future users.
+When considering the [the data lifecycle](https://old.dataone.org/data-life-cycle), it is apparent that data documentation should be created and continually updated throughout all stages of a research project. We should consider how we will collect metadata when planning our data-driven projects, record metadata along with our actual data collection, and describe our data processing and analysis worfklows. We need to consider and document our plans for the long-term storage of our data, related publications, reports, or archives along with our dataset for future users.
 
 (To learn more about the data lifecycle, see [this resource](https://ucdavisdatalab.github.io/workshop_keeping_data_tidy/#datalifecycle).)
 
-## Why is collecting metadata important?
-
-Detailed documentation of datasets and data analysis workflows helps other researchers, including collaborators, find and use your data easier. Strong documentation also enables reuse and reanalysis of your data, which increases research reproducibility ([NASEM 2019](https://www.ncbi.nlm.nih.gov/books/NBK547546/)).
-
-Consistent documentation practices will also help *you* find, use and re-analyze your data in the future. Have you ever put a project on the backburner for a few months, only to return and be confused as to what was in what dataset, which dataset was up to date, or how you were analyzing this process? The diagram below illustrates how information about a dataset or project can be lost over time as researchers become less and less familiar with the inner workings of a particular project. While the figure revolves around issues across a researchers' career, information is also lost during our graduate and post-doctoral work, as we juggle different projects and lose space in our "mental storage". Keeping well-documented data and projects helps us avoid these issues. 
-
-![](img/information_entropy_figure.png){width=65%}
-*(from [Michener et al (1997)](https://esajournals.onlinelibrary.wiley.com/doi/10.1890/1051-0761%281997%29007%5B0330%3ANMFTES%5D2.0.CO%3B2))*
-
-Overall, documenting your data and project consistently will help you save time and avoid headaches in your own project, but also help increase data accessibility, transparency and reproducibility in your field and research at large. 
-
 ## What should be included in metadata?
-Metadata should describe who created or collected the data, what the subject of the data is, and what variables it measures and includes (this is called **descriptive metadata**) It should also cover how the datasets or projects are organized, if and how datasets relate to each other, and how they were processed or analyzed (**structural metadata**). Lastly, it should include information on that credits creators and discusses access and re-use rights (**administrative metadata**, especially important when data are shared, published or archived). 
 
-Some questions to consider: 
+Metadata can be broken down into three general categories: **descriptive metadata** (who created or collected the data and when, the subject of the data, and what variables it measures and includes); **structural metadata** (how the datasets or projects are organized, if and how datasets relate to each other, and how they were processed or analyzed); and **administrative metadata** (contact information for all data and/or code originators, criteria for access and re-use rights, and where the data are shared, published or archived).
 
-* What is the file naming convention or scheme in my project directory?
-* What do the values in the table refer to? 
-* What units are the variables in? What possible levels can they have?
+Minimally, your metadata and associated project documentation should be organized to easily answer the following questions:
+
+**Descriptive**
+
+* How, where, and about what was this data collected? What processes were used for creating the data?
+* What do the values in the table(s) refer to? 
+* What are the units of the variables? What possible levels or range can they have?
 * How is missing data denoted?
 
-* How, where and on what was this data collected? What processes were used for creating the data?
+**Structural**
+
+* What is the file naming convention or scheme in my project directory?
 * What were the criteria for including the data in downstream analyses?
 * How was the data analyzed? 
 * What software do I need in order to read the data?
 * What is the process for updating the data going forward?
 
-* Can I give these data to someone else?
-* Why were the data created?
-* How should the data be cited? Where can I find relevant publications?
+**Administrative**
 
-Other example questions can be found here: [Metadata Questions in Plain Language (USGS)](https://geology.usgs.gov/tools/metadata/tools/doc/ctc/). 
+* Where can the daa be accessed, and by whom? Can I give these data to someone else?
+* Why were the data created? Who were the data created for? Are there any funders to acknowledge?
+* How should the data be cited? 
+* Where can I find relevant publications?
+* Who should people contact if they have questions about the data?
 
-You should be able to answer many of these questions as you build out your documentation through readmes and data dictionaries associated with your project. 
+More questions that can help you decide what to include in your metadata and overall project documentation can be found here: [Metadata Questions in Plain Language (USGS)](https://geology.usgs.gov/tools/metadata/tools/doc/ctc/). 
 
-### Tools for planning and documenting your project 
+## Tools for planning and documenting your project 
 
-Data documentation that accompanies your datasets and resides within your project directory, such as readmes, are important and are the main focus of this workshop. However, as you answer the above questions, you may find yourself considering decisions about how you want to organize, store and structure your data-driven project.
+Data documentation that accompanies your datasets and resides within your project directory are important and are the main focus of this workshop. As you answer the above questions, you may find yourself considering decisions about how you should organize, store, and structure your data-driven project. You need a **data management plan**!
 
-The **DMPtool** helps researchers create a Data Management Plan (DMP). Among the topics included in this plan are guidelines for how you will document and collect metadata in your project, as well as other questions related to structural and administrative metadata. Further, some funding agencies, like the National Science Foundation, are now requiring DMPs along with grant proposals. Creating a DMP can also signal your commitment to more open, reproducible research. DMPs can be included in study **pre-registration**, such as on the [Open Science Framework](https://help.osf.io/hc/en-us/articles/360019931133-Creating-a-data-management-plan-DMP-document), where researchers provide details as to methods, hypotheses, predictions, and data management before conducting a study. 
+The **DMPtool** helps researchers create a Data Management Plan (DMP). Among the topics included in this plan are guidelines for how you will document and collect metadata in your project, as well as other questions related to structural and administrative metadata. Many funding agencies, including the National Science Foundation (NSF), are now requiring DMPs for grant proposals. Creating a DMP can also signal your commitment to more open, reproducible research. DMPs can be included in study **pre-registration**, such as on the [Open Science Framework](https://help.osf.io/hc/en-us/articles/360019931133-Creating-a-data-management-plan-DMP-document), where researchers provide details as to methods, hypotheses, predictions, and data management before conducting a study. It's never too late to create a DMP, but as with most project the earlier you start planning the better. Learn more about the DMPtool and DMP resources from the UC Davis Library [here](https://www.library.ucdavis.edu/service/data-management/plan-2/). 
 
-If you are still in the early phases of a project, it can be a great idea to create a DMP as you move forward.  Learn more about the DMPtool and DMP resources from the UC Davis Library [here](https://www.library.ucdavis.edu/service/data-management/plan-2/). 
+# Levels of Metadata
 
-# Levels of Metadata 
-In this workshop, we will focus on documenting metadata at three levels: 
+In this workshop, we will focus on documenting metadata at three levels within a research project: 
 
 :::: {style="display: flex;"}
 
@@ -94,7 +103,7 @@ In this workshop, we will focus on documenting metadata at three levels:
 
 ::: {}
 
-1.**Project level: File directory contents and organization** 
+1. **Project level: File directory contents and organization** 
 
   * **Documentation format: README file**
     * How is your project organized in folders and files? 
@@ -102,14 +111,14 @@ In this workshop, we will focus on documenting metadata at three levels:
     * What is contained in each of the separate files?
 
 
-2.**Data level: Variables and units** 
+2. **Data level: Variables and units** 
 
   * **Documentation format: Data dictionary and/or codebook**
     * What are the variables in this dataset?
     * What are the possible levels or values, and units for each variable?
     * How are missing values denoted?
 
-3.**Project level: Workflow processes** 
+3. **Project level: Workflow processes** 
 
   * **Documentation format: Workflow diagram**
     * How was data cleaned, processed and/or analyzed? 
@@ -122,64 +131,63 @@ In this workshop, we will focus on documenting metadata at three levels:
 
 These three topics cover aspects of descriptive metadata (1-2) at various levels, and structural metadata (3) at the project level. We go into detail on each, provide templates and examples as a starting place below. 
 
-*Note: Although we have organized the workshop in this format, this information can be organized in a variety of ways. For instance, all of the above information could be included in text in a single readme.txt document. Specific decisions for your project will be up to you and how you plan to use your data, and you may encounter various forms of metadata "in the wild".*
+*Note: You may encounter various different forms and organizations for metadata "in the wild." We have organized this workshop in the above format to align with the complex nature of most research projects, which often contain multitudes of datasets, code files, and outputs. A single readme.txt document can suffice for smaller research projects that involve only one dataset, and only a few code files and outputs. Use the structure that meets the needs of your project and how you plan to use your data.*
 
 ## Project: File Directory Contents and Organization
-At the highest level of your project is your project **directory**, or the folder(s) containing all the files of your project, from data and code to manuscript drafts.
+At the highest level of your project is your project **directory**, or the folder(s) containing all the files of your project. All of your data, code, figures, and even manuscript drafts should be under the umbrella of the project directory.
 
 ### READMEs
 
-A README document will describe the organization and contents of your project, and will serve as the roadmap for any user who "drops in" to your project and needs to orient themselves.
+A README is a document that describes the organization and contents of your project, and serves as the roadmap to orient you - and anyone else who "drops in" to your project - to orient themselves.
 
-**Bare minimum information a project README should include**:
+**At a bare minimum, your README should include**:
 
 * Project title, investigator, institution and dates of project 
-* Brief description of methods for data collection and generation
-  * can include links to publications, protocols or other documentation with more details
+* Brief description of methods for data collection and generation (can include links to publications, databases, protocols, or other documentation with more details)
 * Brief description of data processing, if data are filtered or generated from the raw data 
 * Brief description of what each folder and data file contains
 * Date each file was created
-* Overview of the file naming scheme (if present,see below)
+* Overview of the file naming scheme (if present, see below)
 
 **Best practices for README files**: 
 
 READMEs should 
 
-* Be written in plain-text (.txt) or markdown (.md) so they are easily accessible by anyone / non-proprietary
+* Be written in plain-text (.txt) or markdown (.md) so they are easily accessible by anyone (use a non-proprietary file format)
   * *For more information on markdown, see [this guide](https://www.markdownguide.org/basic-syntax/)*
 * Live in the main directory of the project folder or file they describe 
 * Be named so that it is clear what project / file it describes
 * Be formatted similarly across different projects 
 * Use standardized formats, such as ISO 8601 for dates (YYYY-MM-DD) 
 
-For more information on README contents beyond these minimum and more format recommendations, see [Cornell University's guide to writing "readme" style metadata](https://data.research.cornell.edu/content/readme).
+For more information on README contents beyond these minimum requirements, as well as more format recommendations, see [Cornell University's guide to writing "readme" style metadata](https://data.research.cornell.edu/content/readme).
 
 For some README inspiration, see these real world examples:
 
 * [Example README.txt](https://osf.io/f46sm/) for a software survey project (University of Arizona, OSF)
   * includes directory overview as well as analysis workflow description
-* [README.md](https://github.com/ecalfee/MissDemeanors/blob/master/README.md) for the [2020 CA Election Data Challenge](https://datalab.ucdavis.edu/ca-election-2020-data-challenge/) winning team's project
+* [README.md](https://github.com/ecalfee/MissDemeanors/blob/master/README.md) for the [UC Davis DataLab's 2020 CA Election Data Challenge](https://datalab.ucdavis.edu/ca-election-2020-data-challenge/) winning team's project
   * uses data sourced from archives / government databases, describes analysis workflow
 * [README.md](https://github.com/softwaresaved/software_in_research_survey_2014/blob/1.0/README.md) for a 2014 Software in research survey. 
   * includes language on analysis pipeline and how to reproduce workflow
-* [README.md](https://github.com/Carceral-Ecologies/Carceral-Proximity-Analysis/blob/master/README.md) for the [Hack for California](https://datalab.ucdavis.edu/hack-for-california/) Carceral Ecologies Project.
+* [README.md](https://github.com/Carceral-Ecologies/Carceral-Proximity-Analysis/blob/master/README.md) for the [UC Davis DataLab: Hack for California](https://datalab.ucdavis.edu/hack-for-california/) Carceral Ecologies Project
 
-You'll notice substantial variation in the formats and topics included, but most include the bare minimum information for data reuse. 
+You'll notice substantial variation in the formats and topics included, but the same types of information pertaining to data reuse are included. 
 
 ### Project Directory Structure 
 
 As you begin your README documentation, you may want to consider the organization of your project and directory. Do you have a consistent file naming convention or scheme? Is there a logical hierarchy to your folders?
 
-**Directory structure tips**: While folder directories will very much vary with project types and researcher styles, there are some tips that may help with organization. It's best to include all files for your project in one single project folder, with subfolders. Raw,original data files can often be stored separately from processed or filtered datasets. Results or products, such as statistics or summary tables, or figures, can be stored in separate folders. Code and scripts can have their own folder, too. In large projects, you might also want to have an "archive" folder, where you stored zipped folders of past code scripts or data, so they can be accessed again, but are separate from the rest of the working directory. Whatever you choose, make sure there is some logic to the organization (this will come through when you explain it in your documentation) and that you are **consistent**. 
+**Directory structure tips**: While folder directories will vary across project types and researcher styles, there are some tried and true tips that cna help with your project organization. It's best to include all files for your project in one single project folder, with subfolders. Raw, original data files can often be stored separately from processed or filtered datasets. Results or products (such as statistics, summary tables, or figures) can be stored in separate folders. Code and scripts can have their own folder, too. In large projects, you might also want to have an "archive" folder, where you stored zipped folders of past code scripts or data, so they can be accessed again, but are separate from the rest of the working directory. Whatever you choose, make sure there is some logic to the organization (this will come through when you explain it in your documentation) and that you are **consistent**. 
 
 This diagram shows an example of two ways you can organize a directory: 1) by workflow step, such as data files, code files, and outputs; or 2) by output, such as a result table or figure, and all the data and code required for that output is organized in a sub-directory. (Source: [Library Carpentry](https://librarycarpentry.org/lc-fair-research/05-reusable/index.html))
 
 ![](img/directory_organization_library_carpentry.png)
 
-
-*Note: For researchers in STEM or other computational fields, GitHub repositories are a great place to get a sense of what the organizational norm is for your field. Often, a folder directory will become housed in a version-controlled repository, so repositories can serve as inspiration for how to structure your folder directories. For more on what a repository is and on version control with git, see [this past workshop on version control](https://ucdavisdatalab.github.io/workshop_introduction_to_version_control/)*
+*Note: For researchers in STEM or other computational fields, GitHub repositories are a great place to get a sense of what the organizational norm is for your field. Often, a folder directory will become housed in a version-controlled repository, so repositories can serve as inspiration for how to structure your folder directories. You'll often see a data folder, a code folder, an image or figure folder, etc. within a repository. For more on what a repository is and on version control with git, see [this past workshop on version control](https://ucdavisdatalab.github.io/workshop_introduction_to_version_control/)*
 
 ### File Names
+
 File names are one of the first places many of us store metadata. To better organize your project directory and document your metadata, we recommend using a consistent naming scheme. You can then record the general form of this file naming scheme in your README document, so that future users can easily navigate current files and generate new files that match the format. 
 
 Some possible schemes:  
@@ -192,7 +200,7 @@ Some possible schemes:
 And an example file name scheme in practice, from a bioinformatics study: 
 ![](img/fig3_reiter_brown_2021.jpeg)
 
-(from [Reiter et al (2021)](https://academic.oup.com/gigascience/article/10/1/giaa140/6092773?login=true))
+(from [Reiter et al 2021](https://academic.oup.com/gigascience/article/10/1/giaa140/6092773?login=true))
 As you can see, as file names become more complex, using a consistent scheme and documenting it is KEY to data interpretability! 
 
 In terms of format, file names are best if they are human-readable, machine-readable, and work well with default ordering. Briefly, this means you as a user should be able to get some metadata from the file name, the file name avoids spaces and special characters, and ideally has some date or version number that can be used to sort files and versions. You can read more about these file-naming best practices [here](https://ucdavisdatalab.github.io/workshop_keeping_data_tidy/#how-to-name-your-files). As with file directories, there is no one-size-fits-all solution. That said, you can tailor your names to suit your needs and field of study, and as long as you are consistent and documenting your naming scheme, you are doing it right!
@@ -207,13 +215,13 @@ If you work with tabular or spreadsheet data, as many researchers do, you might 
 
 **Data dictionaries** describe the variables of the dataset and their parameters, specifically for tabular data. **Codebooks** are very similar to data dictionaries and are commonly used in survey data, and may have a slightly different format (but the difference is mainly just field nomenclature).
 
-**Bare minimum  of what a data dictionary or codebook should include:**
+**Bare minimum of what a data dictionary or codebook should include:**
 
 * List of variables / column names and a description of what they include
 * For each variable, the type (numerical? character/text?) and the units it should be entered in (e.g. meters, feet)
 * For each variable, the acceptable range or list of values
 * If a variable uses codes, what the codes refer to 
-  * e.g. 0 = male, 1 = female; Likert scale: 5 = Strongly Agree, 4 = Agree, 3 = Neutral, 2 = Disagree, 1 = Strongly Agree. 
+  * e.g., female = 1, male = 0; Likert scale: 5 = Strongly Agree, 4 = Agree, 3 = Neutral, 2 = Disagree, 1 = Strongly Agree. 
   * codebooks usually go into great detail into these levels for extensive surveys and demographics.
 * How missing data is coded across the dataset or in specific variables 
 
@@ -234,14 +242,14 @@ Some examples of data dictionaries and codebooks:
 
 ![](img/SDD-Example-Codebook.png)
 
-*An example codebook from a larger survey. It explains what the numerical codes mean and how they may connect to codes used in other surveys. This codebook could be improved by further explaining the names / information stored in columns and indicating missing values.[Source](https://www.researchgate.net/publication/341000060_The_Semantic_Data_Dictionary_-An_Approach_for_Describing_and_Annotating_Data)*
+*An example codebook from a larger survey. It explains what the numerical codes mean and how they may connect to codes used in other surveys. This codebook could be improved by further explaining the names / information stored in columns and indicating missing values. [Source](https://www.researchgate.net/publication/341000060_The_Semantic_Data_Dictionary_-An_Approach_for_Describing_and_Annotating_Data)*
 
 More examples: 
 
 * [Extensive codebook](http://gss.norc.org/documents/codebook/GSS_Codebook_index.pdf) for the General Social Survey national survey run by the University of Chicago
 
 
-## Project : Workflow Relationships
+## Project: Workflow Relationships
 
 Once we have covered some of the **descriptive metadata** (the WHAT) detailing our project directory, file organization and our datasets, we can zoom out again and describe how it all relates, and how data is processed and analyzed. This **structural metadata** (the HOW) covers our workflow and processing/analysis "pipeline". 
 
@@ -261,16 +269,16 @@ If your analysis and data processes are more complicated than just one code scri
 
 * Use shapes to represent files, such as datasets, scripts, figures, tables or other output.
 * Connect shapes with arrows to indicate the flow of information through files from data input to result output.
-* Include a key if you use multiple types of shapes or colors for different file types (ex, data vs scripts) 
+* Include a key if you use multiple types of shapes or colors for different file types (i.e., data vs. scripts) 
 * Be consistent in the structure of workflow diagrams across projects
-* Save a version of your workflow diagram as an image, like .png or .jpg so that it can be accessed/viewed by others without your proprietary software (if used)
+* Save a version of your workflow diagram as an image, like .png or .jpg so that it can be accessed/viewed by others without proprietary software
 
-These diagrams can be made in software like Microsoft Powerpoint or Google Slides, and even basic image editors if you stick to standard shapes. Other options include online tools like [Lucidchart](https://www.lucidchart.com/pages/data-flow-diagram) or others [(list here)](https://www.freecodecamp.org/news/flow-chart-creator-and-workflow-diagram-apps/), but the free versions of these software may be limited. 
+These diagrams can be made in software like Microsoft Powerpoint or Google Slides, and even basic image editors if you stick to standard shapes. Other options include online tools like [Lucidchart](https://www.lucidchart.com/pages/data-flow-diagram) or others [(list here)](https://www.freecodecamp.org/news/flow-chart-creator-and-workflow-diagram-apps/) can be optimal for creating data documentation workflows, and some even allow export of the code needed to create a database based on a data structure mapped with that program. Stripped down free and academic/educational license versions of the proprietary workflow software are often available and sufficient for most researchers, but can be limiting for highly complex projects.
 
 Some workflow diagram examples:
 
 * Simple [workflow diagram](https://github.com/dib-lab/dib-MMETSP/blob/master/mmetsp_pipeline1.png) for a bioinformatics project (microbial sequencing)
-* [Workflow diagram](https://github.com/raynamharris/DissociationTest/blob/master/figures/00_methodsoverview/workflow-01.png) for a transcriptomic study (biology/neuroscience) (Harris et al 2019)
+* [Workflow diagram](https://github.com/raynamharris/DissociationTest/blob/master/figures/00_methodsoverview/workflow-01.png) for a transcriptomic study (biology/neuroscience; Harris et al 2019)
 * [Workflow diagram](https://github.com/raynamharris/IntegrativeProjectWT2015/blob/master/figures/00_schematics/figure_workflow.png) for another bioinformatic study (Harris et al 2020)
 
 ## Metadata standards and schemas
@@ -286,23 +294,23 @@ We encourage you to find the metadata standard that is appropriate for your disc
 * [Metadata Standards | UK Digital Curation Centre](https://www.dcc.ac.uk/guidance/standards/metadata/list)
 * [Metadata Directory | Research Data Alliance](http://rd-alliance.github.io/metadata-directory/standards/)
 
+Can't find the metadata standards for your field or data type? Aren't sure where to start? [UC Davis researchers can reach out to a librarian for help.](https://www.library.ucdavis.edu/service/researchsupport/).
 
 # Principles to Practice
 
-In the studio section of the workshop, we will begin fleshing out a README file for your project, and if applicable, a data dictionary/codebook and workflow diagram for your own data-driven project. 
+In the studio section of the workshop, we will begin fleshing out a README file and, if applicable, a data dictionary/codebook and workflow diagram for your own data-driven project. 
 
 We have put together templates to serve as a starting place. Please refer to the additional resources to see examples of the diversity of these documents as well as recommendations for more extensive documentation. 
 
 Let's get documenting! 
 
-## Templates: 
+## Templates
 
 * README template: [markdown](template_files/README_template.md) or [plain text (.txt)](data/README_template.txt)
   * *based off of the Cornell and University of Arizona templates*
 * Data dictionary template: [plain text](template_files/data_dictionary_template.txt) or [tabular (.csv)](template_files/data_dictionary_tabular_template.csv)
   * *based off of the [Open Science Framework recommendations](https://help.osf.io/hc/en-us/articles/360019739054-How-to-Make-a-Data-Dictionary)*
-* Workflow diagram template:[powerpoint file (.ppt)](template_files/workflow_diagram_template.ppt)
-
+* Workflow diagram template: [powerpoint file (.ppt)](template_files/workflow_diagram_template.ppt)
 
 # Additional Resources
 
@@ -330,11 +338,8 @@ Let's get documenting!
 * [Metadata tools | Stanford Libraries](https://library.stanford.edu/research/data-management-services/data-best-practices/creating-metadata/metadata-tools-comparison)
   * List of tools and plug-ins that can help create more standardized and structured metadata
 
-
 ### Data Used in Workshop 
 
-* The data visualization for the in-workshop activity on the top dog breed comes from [Information is Beautiful](https://www.informationisbeautiful.net/visualizations/best-in-show-whats-the-top-data-dog/
-)
+* The data visualization for the in-workshop activity on the top dog breed comes from [Information is Beautiful](https://www.informationisbeautiful.net/visualizations/best-in-show-whats-the-top-data-dog/)
 
-* Data for the studio-section demo comes from [FiveThirtyEight's analysis of Hollywood movie budgets and representation of women](https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/)
-  * Datasets were sourced from [data.world](https://data.world/fivethirtyeight/bechdel)
+* Data for the studio-section demo comes from [FiveThirtyEight's analysis of Hollywood movie budgets and representation of women](https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/). Datasets were sourced from [data.world](https://data.world/fivethirtyeight/bechdel)
