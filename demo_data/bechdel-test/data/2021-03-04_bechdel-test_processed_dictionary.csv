@@ -1,0 +1,21 @@
+﻿Variable,Column Name,Variable Type,Measurement unit, Allowed values,Missing Values,Description 
+Year Movie Released,year,date (YYYY),years,1990 - 2014,"""N/A""",Year movie was released
+IMDB ID number,imdb,character,,tt followed by an 8 digit number ,,Unique identifier from the Internet Movie Database
+Movie title ,title,,,,,Movie title
+Bechdel Test Result (specific) ,clean_test,character,NA,nowomen,"""N/A""",No named women in the film (fails part 1 of the Bechdel test)
+,,,,notalk,"""N/A""",Named women do not talk to each other (fails part 2) 
+,,,,men,"""N/A""",Named women talk about men (fails part 3) 
+,,,,dubious,"""N/A""","Listed as passing the Bechdel test, but there is some debate. "
+,,,,ok,"""N/A""",Passes all three parts of the Bechdel test
+Bechdel Test Pass or Fail ,binary,character,NA,PASS ,"""N/A""",Passes all three parts of the Bechdel test (not dubious in clean_test)
+,,,,FAIL,"""N/A""",Does not pass all three parts of the Bechdel test (see clean_test for specific criteria). 
+Total Movie Budget,budget,numeric,US dollars,positive numeric values ,"""N/A""",Total budget for movie listed in US dollars (at time of production) 
+Domestic Gross Profit,domgross,numeric,US dollars,positive numeric values ,"""N/A""",Total domestic gross profits (profits made from US ticket sales) 
+International Gross Profit,intgross,numeric,US dollars,positive numeric values ,"""N/A""",Total international gross profits (profits made from outside of the US)
+Total Movie Budget (adjusted to 2013 dollars),budget_2013.,numeric,US dollars,positive numeric values ,"""N/A""",Total budget adjusted for the value of the US dollar in 2013. 
+Domestic Gross Profit (adjusted to 2013 dollars),domgross_2013.,numeric,US dollars,positive numeric values ,"""N/A""",Total domestic gross profits (adjusted for the value of the US dollar in 2013)
+International Gross Profit (adjusted to 2013 dollars),intgross_2013.,numeric,US dollars,positive numeric values ,"""N/A""",Total international gross profits (adjusted for the value of the US dollar in 2013)
+International Profit Only ,intOnly,numeric,US dollars,positive numeric values ,"""N/A""",Profit from international revenue only (calculated as total gross profit - domestic gross profit)
+Return on Investment ,ROI,numeric,ratio,positive numeric values ,"""N/A""",Total budget / total gross profits
+Return on Investment (Domestic Profits Only),ROI1,numeric,ratio,positive numeric values ,"""N/A""",Total budget / total domestic profits only
+Return on Investment (International Profits Only) ,ROI2,numeric,ratio,positive numeric values ,"""N/A""",Total budget / total international profits 

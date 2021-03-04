@@ -1,0 +1,16 @@
+
+Top 10 Movies that Failed, by Return-on-Investment
+===============================================================
+           title         year  clean_test  budget    domgross  
+---------------------------------------------------------------
+1       El Mariachi      1,992  nowomen     7,000    2,040,920 
+2   Paranormal Activity  2,007  dubious    450,000  107,918,810
+3  In the Company of Men 1,997   notalk    25,000    2,883,661 
+4         Clerks.        1,994   notalk    27,000    3,073,428 
+5    Napoleon Dynamite   2,004   notalk    400,000  44,540,956 
+6        Fireproof       2,008    men      500,000  33,456,317 
+7          Once          2,006    men      150,000   9,445,857 
+8         Primer         2,004   notalk     7,000     424,760  
+9           Pi           1,998    men      68,000    3,221,152 
+10          Saw          2,004    men     1,200,000 55,185,045 
+---------------------------------------------------------------

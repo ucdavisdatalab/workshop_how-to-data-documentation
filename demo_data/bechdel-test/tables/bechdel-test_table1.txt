@@ -1,0 +1,16 @@
+
+Top 10 Movies that Passed, by Return-on-Investment
+=======================================================
+            title           year   budget    domgross  
+-------------------------------------------------------
+1  The Blair Witch Project  1,999  600,000  140,539,099
+2          Slacker          1,991  23,000    1,227,508 
+3      The Devil Inside     2,012 1,000,000 53,261,944 
+4  My Big Fat Greek Wedding 2,002 5,000,000 241,438,208
+5        Chasing Amy        1,997  250,000  12,006,514 
+6         Insidious         2,010 1,500,000 54,009,150 
+7         Cinderella        1,997 2,900,000 85,000,000 
+8   Paranormal Activity 2   2,010 3,000,000 84,752,907 
+9     The Last Exorcism     2,010 1,800,000 41,034,350 
+10  Paranormal Activity 3   2,011 5,000,000 104,028,807
+-------------------------------------------------------
