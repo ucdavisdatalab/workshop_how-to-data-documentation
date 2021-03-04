@@ -306,7 +306,7 @@ Let's get documenting!
 
 ## Templates
 
-* README template: [markdown](template_files/README_template.md) or [plain text (.txt)](data/README_template.txt)
+* README template: [markdown](template_files/README_template.md) or [plain text (.txt)](template_files/README_template.txt)
   * *based off of the Cornell and University of Arizona templates*
 * Data dictionary template: [plain text](template_files/data_dictionary_template.txt) or [tabular (.csv)](template_files/data_dictionary_tabular_template.csv)
   * *based off of the [Open Science Framework recommendations](https://help.osf.io/hc/en-us/articles/360019739054-How-to-Make-a-Data-Dictionary)*
