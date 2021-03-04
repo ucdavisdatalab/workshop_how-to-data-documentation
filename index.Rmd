@@ -273,7 +273,7 @@ If your analysis and data processes are more complicated than just one code scri
 * Be consistent in the structure of workflow diagrams across projects
 * Save a version of your workflow diagram as an image, like .png or .jpg so that it can be accessed/viewed by others without proprietary software
 
-These diagrams can be made in software like Microsoft Powerpoint or Google Slides, and even basic image editors if you stick to standard shapes. Other options include online tools like [Lucidchart](https://www.lucidchart.com/pages/data-flow-diagram) or others [(list here)](https://www.freecodecamp.org/news/flow-chart-creator-and-workflow-diagram-apps/) can be optimal for creating data documentation workflows, and some even allow export of the code needed to create a database based on a data structure mapped with that program. Stripped down free and academic/educational license versions of the proprietary workflow software are often available and sufficient for most researchers, but can be limiting for highly complex projects.
+These diagrams can be made in software like Microsoft Powerpoint or Google Slides, and even basic image editors if you stick to standard shapes. Other options include online tools like [Lucidchart](https://www.lucidchart.com/pages/data-flow-diagram), [Drawio](https://drawio-app.com/) or others [(list here)](https://www.freecodecamp.org/news/flow-chart-creator-and-workflow-diagram-apps/) can be optimal for creating data documentation workflows, and some even allow export of the code needed to create a database based on a data structure mapped with that program. Stripped down free and academic/educational license versions of the proprietary workflow software are often available and sufficient for most researchers, but can be limiting for highly complex projects.
 
 Some workflow diagram examples:
 
@@ -312,6 +312,15 @@ Let's get documenting!
   * *based off of the [Open Science Framework recommendations](https://help.osf.io/hc/en-us/articles/360019739054-How-to-Make-a-Data-Dictionary)*
 * Workflow diagram template: [powerpoint file (.ppt)](template_files/workflow_diagram_template.ppt)
 
+## Examples of Documentation Using Templates
+
+In the workshop demo, we gave an example of how to build out documentation (a README, a data dictionary, and a workflow diagram) using these template documents. The example dataset revolved around the Bechdel test (a test to see if women are well-represented in film, [from this original cartoon, "The Rule", by Alison Bechel](https://dykestowatchoutfor.com/wp-content/uploads/2014/05/The-Rule-cleaned-up.jpg)), and whether movies that pass the Bechdel test have a higher or lower return-on-investment than movies that do not pass. This was an extension of the FiveThirtyEight analysis shown in [this article]((https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/) (accessed 2021-03-04). The original data set can be accessed at: https://data.world/fivethirtyeight/bechdel. 
+
+* [bechdel-test directory](docs/bechdel-test/)
+* [README_bechdel-test.txt](docs/bechdel-test/README_bechdel-test.txt)
+* [2021-03-04_bechdel-test_processed_dictionary.csv](docs/bechdel-test/data/2021-03-04_bechdel-test_processed_dictionary.csv)
+* [bechdel-test_workflow_diagram.png](docs/bechdel-test/bechdel-test_workflow_diagram.png)
+
 # Additional Resources
 
 ### UC Davis 
@@ -342,4 +351,4 @@ Let's get documenting!
 
 * The data visualization for the in-workshop activity on the top dog breed comes from [Information is Beautiful](https://www.informationisbeautiful.net/visualizations/best-in-show-whats-the-top-data-dog/)
 
-* Data for the studio-section demo comes from [FiveThirtyEight's analysis of Hollywood movie budgets and representation of women](https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/). Datasets were sourced from [data.world](https://data.world/fivethirtyeight/bechdel)
+* Data for the studio-section demo comes from [FiveThirtyEight's analysis of Hollywood movie budgets and representation of women]. Datasets were sourced from [data.world](https://data.world/fivethirtyeight/bechdel)
